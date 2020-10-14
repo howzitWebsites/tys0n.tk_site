@@ -1,0 +1,52 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          always-auth: false
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Installing Project
+        run: npm i
+
+      - name: Building Project
+        run: npm run build
+
+      - name: Deploy to *_serve
+        run: |
+          git config --global user.email "deploy_ga@hcal.cf"
+          git config --global user.name "CDF GA DEPLOY"
+
+          full_repo=${{github.repository}}
+          repo_slug=${full_repo:0:-5}_serve
+
+          git clone https://.:${{ secrets.PAT }}@github.com/$repo_slug target
+
+          if [ -f ./target/CNAME ];
+          then
+            cp ./target/CNAME ./build/
+          fi
+          rm -vrf ./target/*
+          cp -vrf ./build/* ./target
+
+          (
+
+            cd ./target
+
+            git add .
+            git commit -m "Automatic publish"
+            git push -fq origin main
+          )
