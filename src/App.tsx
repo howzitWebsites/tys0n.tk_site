@@ -15,12 +15,12 @@ const App: React.FC = () => {
     <div className="App">
       <section className="flex justify-center m-3">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
-          <Jumbotron image={tyson_1} title="">
+          <Jumbotron image={tyson_1}>
             <div className="flex">
               <button className="h-full my-auto p-4" onClick={() => alert("share this!")}>
                 <Share className="h-8 md:h-10 text-gray-800 fill-current" />
               </button>
-              <h1 className="text-3xl md:text-4xl cursive text-gray-800 font-medium my-auto">This is Tyson...</h1>
+              <h1 className="text-3xl cursive text-gray-800 font-medium my-auto">This is Tyson...</h1>
             </div>
           </Jumbotron>
         </div>

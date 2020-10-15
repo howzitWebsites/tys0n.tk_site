@@ -2,10 +2,9 @@ import React, {FC} from "react";
 
 interface IJumbotronProps {
     image: string,
-    title: string,
 };
 
-const Jumbotron: FC<IJumbotronProps> = ({image, title, children}) => {
+const Jumbotron: FC<IJumbotronProps> = ({image, children}) => {
     return (
     <div className="h-full w-full">
         <div
