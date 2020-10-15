@@ -9,8 +9,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <section className="flex justify-center m-3">
-        <div className="h-screen/3 lg:w-3/4 xl:w-3/4">
-          <Jumbotron image={tyson_1} title="This is Tys0n" fontSize="text-2xl md:text-3xl"/>
+        <div className="h-screen/3 lg:w-3/4 xl:w-3/4 xl:h-screen/2">
+          <Jumbotron image={tyson_1} title="This is Tyson..." titleClasses="text-2xl md:text-3xl cursive"/>
         </div>
       </section>
 {/* 
