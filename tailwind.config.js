@@ -1,4 +1,5 @@
 const heightExtend = require("./tailwind/height.extend");
+const paddingExtend = require("./tailwind/padding.extend");
 
 module.exports = {
   future: {
@@ -10,7 +11,8 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
-        ...heightExtend
+        ...heightExtend,
+        ...paddingExtend
     }
   },
   variants: {},
