@@ -3,6 +3,8 @@ import React from 'react'
 import Jumbotron from "./components/Jumbotron";
 import ContentBlock from "./components/ContentBlock";
 
+import * as Icons from "heroicons-react";
+
 // import tysonLanding from "./images/tyson-landing.jpeg";
 import tyson_1 from "./images/tyson_1.jpg";
 
@@ -11,23 +13,32 @@ const App: React.FC = () => {
     <div className="App">
       <section className="flex justify-center m-3">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
-          <Jumbotron image={tyson_1} title="This is Tyson..." titleClasses="text-3xl md:text-4xl cursive text-gray-800 font-medium"/>
+          <Jumbotron image={tyson_1} title="">
+            <div className="flex">
+              <div className="h-full my-auto ml-3">
+                <Icons.Share size={28}/>
+              </div>
+              <h1 className="text-3xl md:text-4xl cursive text-gray-800 font-medium m-4 md:m-5">This is Tyson...</h1>
+            </div>
+          </Jumbotron>
         </div>
       </section>
 
-      <section className="flex justify-center m-3 mt-8">
+      <section className="flex justify-center m-3 mt-6">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
-          <ContentBlock gradientDirection="tr"/>
+          <ContentBlock gradientDirection="tr">
+            <h1><Icons.PhoneMissedCall/> test</h1>
+          </ContentBlock>
         </div>
       </section>
 
-      <section className="flex justify-center m-3 mt-8">
+      <section className="flex justify-center m-3 mt-6">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
           <ContentBlock gradientDirection="bl"/>
         </div>
       </section>
 
-      <section className="flex justify-center m-3 mt-8">
+      <section className="flex justify-center m-3 mt-6">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
           <ContentBlock gradientDirection="tr"/>
         </div>
