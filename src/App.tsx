@@ -3,6 +3,7 @@ import React from 'react'
 // Components
 import Jumbotron from "./components/Jumbotron";
 import ContentBlock from "./components/ContentBlock";
+import Footer from "./components/Footer";
 
 // Libs
 import * as Icons from 'react-feather';
@@ -12,7 +13,7 @@ import tyson_1 from "./images/tyson_1.jpg";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <main className="App">
      
       <section className="flex justify-center m-3">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
@@ -65,25 +66,13 @@ const App: React.FC = () => {
           </ContentBlock>
         </div>
       </section>
-{/* 
-      <section className="flex justify-center m-3">
-        <div className="container h-screen/3">
-          <Jumbotron image={tysonLanding} title="This is Tys0n" fontSize="text-xl lg:text-2xl"/>
+
+      <section className="flex justify-center">
+        <div className="w-full lg:w-3/4 xl:w-3/4">
+          <Footer/>
         </div>
       </section>
-
-      <section className="flex justify-center m-3">
-        <div className="container h-screen/3">
-          <Jumbotron image={tysonLanding} title="This is Tys0n" fontSize="text-xl lg:text-2xl"/>
-        </div>
-      </section>
-
-      <section className="flex justify-center m-3">
-        <div className="container h-screen/3">
-          <Jumbotron image={tysonLanding} title="This is Tys0n" fontSize="text-xl lg:text-2xl"/>
-        </div>
-      </section> */}
-    </div>
+    </main>
   )
 }
 
