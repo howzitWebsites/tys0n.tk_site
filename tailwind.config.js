@@ -13,6 +13,9 @@ module.exports = {
     extend: {
         ...heightExtend,
         ...paddingExtend
+    },
+    stroke: {
+      current: 'currentColor',
     }
   },
   variants: {},
