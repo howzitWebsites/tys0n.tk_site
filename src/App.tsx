@@ -11,13 +11,25 @@ const App: React.FC = () => {
     <div className="App">
       <section className="flex justify-center m-3">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
-          <Jumbotron image={tyson_1} title="This is Tyson..." titleClasses="text-2xl md:text-3xl cursive"/>
+          <Jumbotron image={tyson_1} title="This is Tyson..." titleClasses="text-3xl md:text-4xl cursive text-gray-800 font-medium"/>
         </div>
       </section>
 
-      <section className="flex justify-center m-3">
+      <section className="flex justify-center m-3 mt-8">
         <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
-          <ContentBlock />
+          <ContentBlock gradientDirection="tr"/>
+        </div>
+      </section>
+
+      <section className="flex justify-center m-3 mt-8">
+        <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
+          <ContentBlock gradientDirection="bl"/>
+        </div>
+      </section>
+
+      <section className="flex justify-center m-3 mt-8">
+        <div className="h-screen/3 w-full lg:w-3/4 xl:w-3/4 xl:h-screen/2">
+          <ContentBlock gradientDirection="tr"/>
         </div>
       </section>
 {/* 
