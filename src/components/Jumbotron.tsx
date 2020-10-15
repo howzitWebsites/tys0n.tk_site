@@ -9,9 +9,14 @@ interface IJumbotronProps {
 const Jumbotron: FC<IJumbotronProps> = ({image, title, titleClasses}) => {
     return (
     <div className="h-full w-full">
-        <img src={image} className="object-cover w-full h-full rounded-lg shadow-lg" alt={title}/>
-        <div className="flex justify-center text-center -mt-8 md:-mt-10">
-            <h1 className={`bg-gradient-to-r from-green-300 to-gray-600 p-4 w-4/5 md:w-1/2 md:p-5 rounded-lg shadow-lg ${titleClasses}`}>{title}</h1>
+        <div
+            style={{backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center"}}
+            className="relative w-full h-full rounded-lg shadow-lg"
+        >
+            <div className="absolute bg-gradient-to-tr from-green-300 to-transparent w-full h-full rounded-lg"></div>
+            <div className=" absolute items-end ">
+                <h1 className={`static ${titleClasses}`}>{title}</h1>
+            </div>
         </div>
     </div>
     );
