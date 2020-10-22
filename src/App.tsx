@@ -35,7 +35,7 @@ const App: React.FC = () => {
               <div className="h-full my-auto mr-1">
                 <Icons.BookOpen className="h-8 md:h-10 stroke-fill text-gray-800"/>
               </div>
-              <h1 className="text-2xl cursive text-gray-800 font-medium my-auto pt-2">History</h1>
+              <h1 className="text-2xl cursive text-gray-800 font-medium my-auto pt-2">Story</h1>
             </div>
           </ContentBlock>
         </div>

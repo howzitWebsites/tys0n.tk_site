@@ -1,5 +1,5 @@
-const heightExtend = require("./tailwind/height.extend");
-const paddingExtend = require("./tailwind/padding.extend");
+const heightExtend = require("./tailwind-extensions/height.extend");
+const paddingExtend = require("./tailwind-extensions/padding.extend");
 
 module.exports = {
   future: {
